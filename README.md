@@ -1,5 +1,11 @@
-#install composer 
+## Project Setup
 
+```sh
+    Install Composer 
+```
 
-#Run the application 
-#php artisan serve 
+### Run the application
+
+```sh
+php artisan serve
+```
