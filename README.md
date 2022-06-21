@@ -4,7 +4,7 @@
 Install Composer 
 ```
 
-### create Database (DB_UMS_Laravel) and run migration
+### Create Database (DB_UMS_Laravel) and run migration
 
 ```sh
 php artisan migrate
