@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,9 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/allUser', [UserController::class, 'index'])->name('allUsers');
-Route::post('/addUser', [UserController::class, 'addUser'])->name('addUser');
-Route::post('/updateUser/:id', [UserController::class, 'updateUser'])->name('updateUser');
+// Route::get('/allUser', [UserController::class, 'index'])->name('allUsers');
+// Route::post('/addUser', [UserController::class, 'addUser'])->name('addUser')->middleware('cors');
+// Route::post('/updateUser/:id', [UserController::class, 'updateUser'])->name('updateUser')->middleware('cors');
 
 
 
