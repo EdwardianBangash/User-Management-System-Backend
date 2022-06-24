@@ -22,3 +22,4 @@ use App\Http\Controllers\UserController;
 Route::get('/allUser', [UserController::class, 'index'])->name('allUsers');
 Route::post('/addUser', [UserController::class, 'addUser'])->name('addUser');
 Route::post('/updateUser', [UserController::class, 'updateUser'])->name('updateUser');
+Route::post('/deleteUser', [UserController::class, 'deleteUser'])->name('deleteUser');

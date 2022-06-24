@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
 
 class UserController extends Controller
@@ -75,5 +74,14 @@ class UserController extends Controller
             return response()->json(['error'=>'Failed to update data'], 404);
         }
 
+    }
+
+    public function deleteUser(Request $request){
+        $user = User::find($request->id);
+        if($user->delete()){
+            return response()->json(['success'=>true], 200);
+        }else{
+            return response()->json(['success'=>false], 500);
+        }
     }
 }
