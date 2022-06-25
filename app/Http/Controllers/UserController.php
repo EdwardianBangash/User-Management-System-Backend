@@ -14,6 +14,11 @@ class UserController extends Controller
         return response()->json(array('data' => $user));
     }
 
+    public function countUser(){
+        $user = User::get();
+        return response()->json(array('totalUser' => $user->count()));
+    }
+
     public function addUser(Request $request){
      
         $validator = Validator::make($request->all(), [
